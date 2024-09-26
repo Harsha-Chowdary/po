@@ -1,0 +1,171 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    /* Gradient Background: Purple, Blue, Red, Green */
+    background: linear-gradient(135deg, #4a148c, #2962ff, #d50000, #00e676);
+    background-size: 400% 400%; /* Allows the gradient to smoothly cover the page */
+    animation: gradientAnimation 15s ease infinite; /* Animate gradient */
+    color: #333;
+    padding-top: 60px; /* Prevent content from hiding under the fixed header */
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    background-color: rgba(74, 20, 140, 0.9); /* Slight transparency for header */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #fff; /* White text for readability on header */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+header ul li a:hover {
+    color: #00e676; /* Green hover effect */
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(232, 234, 246, 0.9); /* Light blue with slight transparency */
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+section h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #d50000; /* Bold red for section titles */
+}
+
+section p {
+    font-size: 18px;
+    color: #424242; /* Darker gray for section text */
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(232, 234, 246, 0.9);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+#skills h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #d50000;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px auto;
+    height: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+    height: 100%;
+    background-color: #2962ff; /* Blue color for progress */
+    transition: width 0.3s ease;
+}
+
+.progress-bar:hover .progress {
+    background-color: #00e676; /* Green color on hover */
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #ffffff; /* White background for project cards */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+    border: 2px solid #2962ff; /* Blue border on hover */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(74, 20, 140, 0.9); /* Same deep purple with slight transparency */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer p a {
+    color: #00e676; /* Green for footer links */
+    text-decoration: none;
+}
+
+footer p a:hover {
+    color: #ff1744; /* Red hover for footer links */
+}
+
+/* Media Queries */
+@media(max-width: 768px) {
+    header ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
